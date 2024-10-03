@@ -1,0 +1,87 @@
+.navigation-container {
+  margin-top: -0.5rem;
+  position: absolute;
+  width: 100%;
+  background-color: rgb(110, 163, 132);
+}
+
+  .navigation-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+  }
+
+  .navigation-menu {
+    display: flex;
+    align-items: center;
+  }
+
+
+.navigation-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-right: 4rem;
+  margin-left: 10rem;
+}
+
+.home-navigation-link {
+  text-decoration: none;
+  margin-right: 2rem;
+}
+
+.books-navigation-link {
+  text-decoration: none;
+  margin-right: 2rem;
+}
+
+.about-navigation-link {
+  text-decoration: none;
+  margin-right: 2rem;
+}
+
+.contact-navigation-link {
+  text-decoration: none;
+}
+
+.navigation-link {
+  text-decoration: none;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.navigation-link:hover {
+  color: #ef5350;
+}
+
+.dropdown-icon {
+  margin-left: 5px;
+}
+
+.shopping-cart {
+  display: flex;
+  align-items: center;
+}
+
+.cart-icon {
+  font-size: 2rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.cart-icon:hover {
+  color: #ef5350;
+}
+
+.highlight-b::before {
+  content: "";
+  top: 50%;
+  padding-left: 2rem;
+  transform: translate(-50%, -50%);
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #ef5350;
+  border: 2px solid #ef5350;
+}

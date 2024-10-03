@@ -43,9 +43,6 @@ namespace Persistence.Migrations
                         .HasPrecision(18, 2)
                         .HasColumnType("decimal(18, 2)");
 
-                    b.Property<string>("Title")
-                        .HasColumnType("nvarchar(max)");
-
                     b.HasKey("Id");
 
                     b.ToTable("Products");

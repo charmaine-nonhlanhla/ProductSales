@@ -1,0 +1,42 @@
+/* .homepage-content {
+   margin-left: 70rem;
+   margin-top: 10rem;
+} */
+
+.homepage-content {
+    background-image: url('../../assets/ProductStore/Backgrounds/FreshFruit.jpg');
+    background-size: 2500px 1200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    opacity: 1;
+ }
+
+.homepage-header {
+    display: flex;
+    margin-left: 10rem;
+    font-size: 4rem;
+
+}
+
+.homepage-paragraph {
+    width: 40rem;
+    font-size: 1.4rem;
+}
+
+.homepageImage {
+    margin-left: -74.97rem;
+    width: 70rem;
+    height: 50rem;
+    opacity: 1;
+    border-radius: 5px;
+    padding: 5rem 5rem 5rem;
+    margin-top: -33rem;
+    margin-bottom: 12rem;
+    
+  }
+  

@@ -15,3 +15,4 @@ C:\Users\CMogotlane.SINGULAR\PRODUCTSALES\ProductSales\Application\obj\Debug\net
 C:\Users\CMogotlane.SINGULAR\PRODUCTSALES\ProductSales\Application\obj\Debug\net8.0\refint\Application.dll
 C:\Users\CMogotlane.SINGULAR\PRODUCTSALES\ProductSales\Application\obj\Debug\net8.0\Application.pdb
 C:\Users\CMogotlane.SINGULAR\PRODUCTSALES\ProductSales\Application\obj\Debug\net8.0\ref\Application.dll
+C:\Users\CMogotlane.SINGULAR\PRODUCTSALES\ProductSales\Application\obj\Debug\net8.0\Application.sourcelink.json

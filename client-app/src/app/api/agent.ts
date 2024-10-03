@@ -29,7 +29,7 @@ const requests = {
 };
 
 const Products = {
-    listProducts: () => requests.get<Product[]>('/products'),
+    Productlist: () => requests.get<Product[]>('/products'),
 }
 
 const agent = {

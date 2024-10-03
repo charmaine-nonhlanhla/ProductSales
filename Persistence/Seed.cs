@@ -1,4 +1,5 @@
 using Domain;
+using Microsoft.EntityFrameworkCore;
 
 namespace Persistence
 {
@@ -12,61 +13,175 @@ namespace Persistence
             {
                 new Product
                 {
-                    Title = "Diary of a Wimpy Kid",
-                    Description = "In No Brainer, book 18 of the Diary of a Wimpy Kid series from #1 international bestselling author Jeff Kinney, it's up to Greg to save his school before it's shuttered for good.",
-                    SalePrice = 29.99m,
-                    Category = "Childrens Books",
-                    Image = @"C:\Users\CMogotlane.SINGULAR\PRODUCTSALES\ProductSales\client-app\src\assets\BookStore\ChildrensBooks\Diary of a Wimpy Kid.jpg"
+                    Description = "Apples",
+                    SalePrice = 15.33m,
+                    Category = "Fruit",
+                    Image = @"C:\Users\CMogotlane.SINGULAR\PRODUCTSALES\ProductSales\client-app\src\assets\ProductStore\Fruits\Apples.jpg"
                 },
                 new Product
                 {
-                    Title = "Gabby's Dollhouse",
-                    Description = "It's time for a Dollhouse Delivery! When Gabby opens the Meow Meow Mailbox she finds an invitation to MerCat's Spa Day Party in the dollhouse. With the help of her magic cat ears, Gabby and Pandy Paws shrink down and join their friends in the dollhouse to get ready. But when MerCat's colour and sparkle fade away, can the friends help her get back her glow in time for the party? Gabby and the gang get creative and whip up some super squishy face masks, special soap and a magical item all the way from Mermaidlantis that bring the sparkle back to the spa day!",
-                    SalePrice = 39.99m,
-                    Category = "Childrens Books",
-                    Image = @"C:\Users\CMogotlane.SINGULAR\PRODUCTSALES\ProductSales\client-app\src\assets\BookStore\ChildrensBooks\Gabby's Dollhouse.jpg"
+                    Description = "Oranges",
+                    SalePrice = 11.57m,
+                    Category = "Fruit",
+                    Image = @"C:\Users\CMogotlane.SINGULAR\PRODUCTSALES\ProductSales\client-app\src\assets\ProductStore\Fruits\Oranges.jpg"
                 },
-                  new Product
+                new Product
                 {
-                    Title = "In the Jungle",
-                    Description = "Little ones can join in the fun In the Jungle by pulling out the sliders, pushing up the tabs and counting all the animals! How many lazy lions are yawning? How many zebras are skipping?",
-                    SalePrice = 49.99m,
-                    Category = "Childrens Books",
-                    Image = @"C:\Users\CMogotlane.SINGULAR\PRODUCTSALES\ProductSales\client-app\src\assets\BookStore\ChildrensBooks\In the Jungle.jpg"
+                    Description = "Potatoes",
+                    SalePrice = 9.99m,
+                    Category = "Vegetable",
+                    Image = @"C:\Users\CMogotlane.SINGULAR\PRODUCTSALES\ProductSales\client-app\src\assets\ProductStore\Vegetables\Potatoes.jpg"
+                },
+                new Product
+                {
+                    Description = "Spinach",
+                    SalePrice = 12.00m,
+                    Category = "Vegetable",
+                    Image = @"C:\Users\CMogotlane.SINGULAR\PRODUCTSALES\ProductSales\client-app\src\assets\ProductStore\Vegetables\Spinach.jpg"
+                },
+                new Product
+                {
+                    Description = "Grapes",
+                    SalePrice = 19.99m,
+                    Category = "Fruit",
+                    Image = @"C:\Users\CMogotlane.SINGULAR\PRODUCTSALES\ProductSales\client-app\src\assets\ProductStore\Fruits\Grapes.jpg"
+                },
+                new Product
+                {
+                    Description = "Strawberries",
+                    SalePrice = 9.99m,
+                    Category = "Fruit",
+                    Image = @"C:\Users\CMogotlane.SINGULAR\PRODUCTSALES\ProductSales\client-app\src\assets\ProductStore\Fruits\Strawberries.jpg"
+                },
+                new Product
+                {
+                    Description = "Plums",
+                    SalePrice = 25.00m,
+                    Category = "Fruit",
+                    Image = @"C:\Users\CMogotlane.SINGULAR\PRODUCTSALES\ProductSales\client-app\src\assets\ProductStore\Fruits\Plums.jpg"
+                },
+                new Product
+                {
+                    Description = "Beans",
+                    SalePrice = 16.00m,
+                    Category = "Vegetable",
+                    Image = @"C:\Users\CMogotlane.SINGULAR\PRODUCTSALES\ProductSales\client-app\src\assets\ProductStore\Vegetables\Beans.jpg"
+                },
+                new Product
+                {
+                    Description = "Leeks",
+                    SalePrice = 5.50m,
+                    Category = "Vegetable",
+                    Image = @"C:\Users\CMogotlane.SINGULAR\PRODUCTSALES\ProductSales\client-app\src\assets\ProductStore\Vegetables\Leeks.jpg"
+                },
+                new Product
+                {
+                    Description = "Onions",
+                    SalePrice = 10.50m,
+                    Category = "Vegetable",
+                    Image = @"C:\Users\CMogotlane.SINGULAR\PRODUCTSALES\ProductSales\client-app\src\assets\ProductStore\Vegetables\Onions.jpg"
+                },
+                new Product
+                {
+                    Description = "Peppers",
+                    SalePrice = 25.99m,
+                    Category = "Vegetable",
+                    Image = @"C:\Users\CMogotlane.SINGULAR\PRODUCTSALES\ProductSales\client-app\src\assets\ProductStore\Vegetables\Peppers.jpg"
+                },
+                new Product
+                {
+                    Description = "Bananas",
+                    SalePrice = 14.50m,
+                    Category = "Fruit",
+                    Image = @"C:\Users\CMogotlane.SINGULAR\PRODUCTSALES\ProductSales\client-app\src\assets\ProductStore\Fruits\Bananas.jpg"
+                },
+                new Product
+                {
+                    Description = "Pears",
+                    SalePrice = 11.00m,
+                    Category = "Fruit",
+                    Image = @"C:\Users\CMogotlane.SINGULAR\PRODUCTSALES\ProductSales\client-app\src\assets\ProductStore\Fruits\Pears.jpg"
+                },
+                new Product
+                {
+                    Description = "Mangos",
+                    SalePrice = 25.00m,
+                    Category = "Fruit",
+                    Image = @"C:\Users\CMogotlane.SINGULAR\PRODUCTSALES\ProductSales\client-app\src\assets\ProductStore\Fruits\Mangos.jpg"
+                },
+                new Product
+                {
+                    Description = "Broccoli",
+                    SalePrice = 16.20m,
+                    Category = "Vegetable",
+                    Image = @"C:\Users\CMogotlane.SINGULAR\PRODUCTSALES\ProductSales\client-app\src\assets\ProductStore\Vegetables\Broccoli.jpg"
+                },
+                new Product
+                {
+                    Description = "Cabbage",
+                    SalePrice = 11.00m,
+                    Category = "Vegetable",
+                    Image = @"C:\Users\CMogotlane.SINGULAR\PRODUCTSALES\ProductSales\client-app\src\assets\ProductStore\Vegetables\Cabbage.jpg"
+                },
+                new Product
+                {
+                    Description = "Beetroot",
+                    SalePrice = 25.00m,
+                    Category = "Vegetable",
+                    Image = @"C:\Users\CMogotlane.SINGULAR\PRODUCTSALES\ProductSales\client-app\src\assets\ProductStore\Vegetables\Beetroot.jpg"
+                },
+                new Product
+                {
+                    Description = "Apricot",
+                    SalePrice = 16.20m,
+                    Category = "Fruit",
+                    Image = @"C:\Users\CMogotlane.SINGULAR\PRODUCTSALES\ProductSales\client-app\src\assets\ProductStore\Fruits\Apricot.jpg"
+                },
+                new Product
+                {
+                    Description = "Figs",
+                    SalePrice = 25.00m,
+                    Category = "Fruit",
+                    Image = @"C:\Users\CMogotlane.SINGULAR\PRODUCTSALES\ProductSales\client-app\src\assets\ProductStore\Fruits\Figs.jpg"
+                },
+                new Product
+                {
+                    Description = "Cherries",
+                    SalePrice = 16.20m,
+                    Category = "Fruit",
+                    Image = @"C:\Users\CMogotlane.SINGULAR\PRODUCTSALES\ProductSales\client-app\src\assets\ProductStore\Fruits\Cherries.jpg"
                 }
             };
 
             await context.Products.AddRangeAsync(products);
-            await context.SaveChangesAsync(); 
+            await context.SaveChangesAsync();
+
+
+            var apples = await context.Products.FirstOrDefaultAsync(p => p.Description == "Apples");
+            var oranges = await context.Products.FirstOrDefaultAsync(p => p.Description == "Oranges");
+
 
             var productSales = new List<ProductSale>
-            {
-                new ProductSale
-                {
-                    ProductId = 1, 
-                    SalePrice = 29.99m,
-                    SaleQty = 2,
-                    SaleDate = DateTime.Now.AddDays(-5) 
-                },
-                new ProductSale
-                {
-                    ProductId = 2, 
-                    SalePrice = 39.99m,
-                    SaleQty = 1,
-                    SaleDate = DateTime.Now.AddDays(-3) 
-                },
-                new ProductSale
-                {
-                    ProductId = 3, 
-                    SalePrice = 49.99m,
-                    SaleQty = 5,
-                    SaleDate = DateTime.Now.AddDays(-1) 
-                }
+    {
+        new ProductSale
+        {
+            ProductId = apples.Id,
+            SalePrice = apples.SalePrice,
+            SaleQty = 5,
+            SaleDate = DateTime.Now.AddDays(-10)
+        },
+        new ProductSale
+        {
+            ProductId = oranges.Id,
+            SalePrice = oranges.SalePrice,
+            SaleQty = 3,
+            SaleDate = DateTime.Now.AddDays(-8)
+        }
 
-            };
+    };
 
             await context.ProductSales.AddRangeAsync(productSales);
-            await context.SaveChangesAsync(); 
+            await context.SaveChangesAsync();
         }
     }
 }
