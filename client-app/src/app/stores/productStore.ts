@@ -17,8 +17,11 @@ export default class ProductStore {
         this.setLoadingInitial(true);
         try {
             const products = await agent.Products.Productlist();
+            this.products = products;
         } catch (error) {
-            console.log(error)
+            console.log(error);
+        } finally {
+          this.setLoadingInitial(false);
         }
     }
 
