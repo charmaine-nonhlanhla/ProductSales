@@ -1,9 +1,11 @@
 import { makeAutoObservable } from "mobx";
 import { Product } from "../models/products";
 import agent from "../api/agent";
+import { ProductSale } from "../models/productSales";
 
 export default class ProductStore {
     products: Product[] = [];
+    sales: ProductSale[] = [];
     selectedProduct: Product | undefined = undefined;
     loading = false;
     loadingInitial = false;
@@ -35,6 +37,18 @@ export default class ProductStore {
 
     cancelSelectedProduct = () => {
         this.selectedProduct = undefined;
+    }
+
+    loadSales = async () => {
+      this.setLoadingInitial(true);
+      try {
+          const sales = await agent.Products.SalesList();
+          this.sales = sales;
+      } catch (error) {
+        console.log(error);
+      } finally {
+        this.setLoadingInitial(false);
+      }
     }
 
 }

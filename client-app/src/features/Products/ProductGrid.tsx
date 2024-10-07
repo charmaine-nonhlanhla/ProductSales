@@ -17,9 +17,9 @@ const ProductGrid = observer(() => {
         <div className="product-grid">
             {productStore.products.map((product) => (
                 <div className="product-card" key={product.id}>
-                    <img src={product.image} alt={product.description} />
-                    <h3>{product.description}</h3>
-                    <p>Price: ${product.salePrice}</p>
+                    <h3 className="product-description">{product.description}</h3>
+                    <img className="product-image" width={300} src={product.image} alt={product.description} />
+                    <p className="product-price">Price: R{product.salePrice}</p>
                 </div>
             ))}
         </div>

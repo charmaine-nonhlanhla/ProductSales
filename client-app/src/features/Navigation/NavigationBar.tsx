@@ -1,5 +1,4 @@
 import "./NavigationBar.css";
-import { IoIosArrowDown } from "react-icons/io";
 import { FiShoppingCart } from "react-icons/fi";
 import { Link } from "react-router-dom";
 
@@ -18,8 +17,12 @@ export const NavigationBar = () => {
               Home
             </Link>
 
-            <Link to="/products" className="books-navigation-link">
-              Shop <IoIosArrowDown className="dropdown-icon" />
+            <Link to="/products" className="products-navigation-link">
+              Products
+            </Link>
+
+            <Link to="/sales" className="sales-navigation-link">
+              Sales
             </Link>
 
             <Link to="/about" className="about-navigation-link">
@@ -29,6 +32,11 @@ export const NavigationBar = () => {
             <Link to="/contact" className="contact-navigation-link">
               Contact
             </Link>
+
+            <Link to="/management" className="product-management-navigation-link">
+              Product Management
+            </Link>
+
           </div>
         </div>
         <div className="shopping-cart">

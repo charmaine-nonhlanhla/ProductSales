@@ -1,5 +1,6 @@
 import axios, {AxiosResponse } from 'axios';
 import { Product } from '../models/products';
+import { ProductSale } from '../models/productSales';
 
 
 const sleep = (delay: number) => {
@@ -30,6 +31,7 @@ const requests = {
 
 const Products = {
     Productlist: () => requests.get<Product[]>('/products'),
+    SalesList: () => requests.get<ProductSale[]>('/productsales'),
 }
 
 const agent = {

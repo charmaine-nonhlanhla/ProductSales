@@ -2,8 +2,8 @@ import { Navigate, RouteObject, createBrowserRouter } from "react-router-dom";
 import App from "../../App";
 import HomePage from "../../features/Home/HomePage";
 import ProductsPage from "../../features/Products/ProductsPage";
-import { NavigationBar } from "../../features/Navigation/NavigationBar";
 import { MainLayout } from "./MainLayout";
+import SalesPage from "../../features/Product Sales/SalesPage";
 
 export const routes: RouteObject[] = [
   {
@@ -14,8 +14,9 @@ export const routes: RouteObject[] = [
         path: '', 
         element: <MainLayout />,
         children: [
-          { path: 'home', element: <HomePage /> },
+          { path: '', element: <HomePage /> },
           { path: 'products', element: <ProductsPage /> },
+          { path: 'sales', element: <SalesPage /> },
           { path: '*', element: <Navigate to="/" /> }
         ]
       },

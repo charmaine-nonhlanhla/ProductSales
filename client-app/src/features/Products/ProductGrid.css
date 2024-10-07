@@ -1,0 +1,26 @@
+.product-grid {
+  display: flex;
+  position: absolute;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: 2rem;
+}
+
+.product-card {
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+}
+
+.product-image {
+  width: 20rem;
+  height: 20rem;
+  object-fit: cover;
+}
+
+.product-description {
+  color: #269577;
+}
+
+.product-price {
+  color: #269577;
+}
