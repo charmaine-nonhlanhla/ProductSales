@@ -18,7 +18,7 @@ export default class ProductStore {
     loadProducts = async () => {
         this.setLoadingInitial(true);
         try {
-            const products = await agent.Products.Productlist();
+            const products = await agent.Products.productList();
             this.products = products;
         } catch (error) {
             console.log(error);
@@ -42,7 +42,7 @@ export default class ProductStore {
     loadSales = async () => {
       this.setLoadingInitial(true);
       try {
-          const sales = await agent.Products.SalesList();
+          const sales = await agent.Products.salesList();
           this.sales = sales;
       } catch (error) {
         console.log(error);

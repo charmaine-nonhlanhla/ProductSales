@@ -21,15 +21,13 @@ namespace API.Extensions
       {
         opt.AddPolicy("CorsPolicy", policy =>
               {
-            policy.AllowAnyHeader().AllowAnyMethod().WithOrigins("http://localhost:3000");
-          });
+                policy.AllowAnyHeader().AllowAnyMethod().WithOrigins("https://localhost:3000").WithExposedHeaders("WWW-Authenticate");
+              });
       });
       services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(ProductList.Handler).Assembly));
       services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(SyncProductsCommand.Handler).Assembly));
       services.AddScoped<Application.Products.Services.ProductService>();
-
       services.AddHttpClient();
-
       services.AddAutoMapper(typeof(MappingProfiles).Assembly);
 
       return services;

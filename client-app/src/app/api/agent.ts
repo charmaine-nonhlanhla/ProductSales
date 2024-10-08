@@ -1,6 +1,8 @@
 import axios, {AxiosResponse } from 'axios';
 import { Product } from '../models/products';
 import { ProductSale } from '../models/productSales';
+import { User, UserFormValues } from '../models/user';
+import { store } from '../stores/store';
 
 
 const sleep = (delay: number) => {
@@ -9,7 +11,7 @@ const sleep = (delay: number) => {
     })
 }
 
-axios.defaults.baseURL = 'http://localhost:5000/api';
+axios.defaults.baseURL = import.meta.env.VITE_API_URL;
 
 axios.interceptors.response.use(response => {
     return sleep(1000).then(() => {
@@ -22,6 +24,12 @@ axios.interceptors.response.use(response => {
 
 const responseBody = <T> (response: AxiosResponse<T>) => response.data;
 
+axios.interceptors.request.use(config => {
+  const token = store.commonStore.token;
+  if (token && config.headers) config.headers.Authorization = `Bearer ${token}`;
+  return config;
+} )
+
 const requests = {
     get: <T> (url: string) => axios.get<T>(url).then( responseBody),
     post: <T> (url: string, body: {}) => axios.post<T>(url, body).then( responseBody),
@@ -29,13 +37,22 @@ const requests = {
     delete: <T>  (url: string) => axios.delete<T>(url).then( responseBody),
 };
 
-const Products = {
-    Productlist: () => requests.get<Product[]>('/products'),
-    SalesList: () => requests.get<ProductSale[]>('/productsales'),
+const Account = {
+  currentUser: () => requests.get<User>('/account'),
+  login: (user: UserFormValues) => requests.post<User>('account/login', user),
+  register: (user: UserFormValues) => requests.post<User>('account/register', user),
+  refreshToken: () => requests.post<User>('/account/refreshToken', {})
+
 }
 
+const Products = {
+    productList: () => requests.get<Product[]>('/products'),
+    salesList: () => requests.get<ProductSale[]>('/productsales'),
+};
+
 const agent = {
-    Products
+    Account,
+    Products,
 }
 
 export default agent;
