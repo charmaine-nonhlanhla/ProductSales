@@ -1,8 +1,9 @@
 .navigation-container {
-  margin-top: -0.5rem;
-  position: relative;
-  width: 100%;
-  background-color: rgb(110, 163, 132);
+  width: auto;
+   margin-left: 25rem;
+   height: 70px;
+  box-shadow: 0 4px 8px rgba(149, 145, 145, 0.3);
+  
 }
 
   .navigation-content {
@@ -17,47 +18,38 @@
     align-items: center;
   }
 
-
-.navigation-title {
-  color: white;
-  font-size: 2rem;
-  font-weight: bold;
-  margin-right: 4rem;
-  margin-left: 10rem;
-}
-
 .home-navigation-link {
-  color: white;
+  color: #269577;
   text-decoration: none;
   margin-right: 2rem;
 }
 
 .products-navigation-link {
-  color: white;
+  color: #269577;
   text-decoration: none;
   margin-right: 2rem;
 }
 
 .about-navigation-link {
-  color: white;
+  color: #269577;
   text-decoration: none;
   margin-right: 2rem;
 }
 
 .contact-navigation-link {
-  color: white;
+  color: #269577;
   margin-right: 35rem;
   text-decoration: none;
 }
 
 .sales-navigation-link {
-  color: white;
+  color: #269577;
   margin-right: 2rem;
   text-decoration: none;
 }
 
 .product-management-navigation-link {
-  color: white;
+  color: #269577;
   text-decoration: none;
 }
 
@@ -74,7 +66,7 @@
 }
 
 .cart-icon {
-  color: white;
+  color: #269577;
   font-size: 2rem;
   cursor: pointer;
   transition: color 0.3s ease;

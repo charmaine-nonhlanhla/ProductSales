@@ -48,6 +48,9 @@ const Account = {
 const Products = {
     productList: () => requests.get<Product[]>('/products'),
     salesList: () => requests.get<ProductSale[]>('/productsales'),
+    deleteProduct: (id: string) => requests.delete<void>(`/products/${id}`),
+    addProduct: (product: Product) => requests.post<void>(`/products`, product), 
+    updateProduct: (id: string, product: Product) => requests.put<void>(`/products/${id}`, product),
 };
 
 const agent = {

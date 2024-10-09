@@ -28,6 +28,18 @@ export default class UserStore {
     }
   };
 
+  register = async (creds: UserFormValues) => {
+    try {
+      const user = await agent.Account.register(creds);
+      store.commonStore.setToken(user.token);
+      runInAction(() => (this.user = user));
+      router.navigate("/");
+      console.log(user);
+    } catch (error) {
+      throw error;
+    }
+  };
+
   logout = () => {
     store.commonStore.setToken(null);
     this.user = null;
@@ -42,6 +54,26 @@ export default class UserStore {
       console.log(error);
     }
   };
+
+  // forgotPassword = async (creds: UserFormValues) => {
+  //     try {
+  //     await agent.Account.forgotPassword(creds);
+  //     } catch (error: any) {
+  //         if (error?.response?.status === 400) throw error;
+  //         store.modalStore.closeModal();
+  //         console.log(500);
+  //     }
+  // }
+
+  // resetPassword = async (creds: UserFormValues) => {
+  //     try {
+  //         await agent.Account.resetPassword(creds);
+  //     } catch (error: any) {
+  //         if (error?.response?.status === 400) throw error;
+  //         store.modalStore.closeModal();
+  //         console.log(500);
+  //     }
+  // }
 
   refreshToken = async () => {
     this.stopRefreshTokenTimer();
@@ -65,5 +97,5 @@ export default class UserStore {
 
   private stopRefreshTokenTimer() {
     clearTimeout(this.refreshTokenTimeout);
-  };
+  }
 }

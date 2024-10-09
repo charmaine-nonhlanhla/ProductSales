@@ -4,6 +4,8 @@ import HomePage from "../../features/Home/HomePage";
 import ProductsPage from "../../features/Products/ProductsPage";
 import { MainLayout } from "./MainLayout";
 import SalesPage from "../../features/Product Sales/SalesPage";
+import LoginPage from "../../features/Login/LoginPage";
+import RegistrationPage from "../../features/Registration/RegistrationPage";
 
 export const routes: RouteObject[] = [
   {
@@ -20,6 +22,9 @@ export const routes: RouteObject[] = [
           { path: '*', element: <Navigate to="/" /> }
         ]
       },
+
+      {path: 'login', element: <LoginPage /> },
+      {path: 'register', element: <RegistrationPage /> }
     ]
   }
 ];

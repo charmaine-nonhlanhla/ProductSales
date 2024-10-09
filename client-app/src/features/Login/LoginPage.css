@@ -1,0 +1,117 @@
+.login-background {
+  background-image: url("../../assets/Backgrounds/loginImage.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.login-container {
+  width: 80rem;
+  height: 40rem;
+  background-color: white;
+  border-radius: 4px;
+  padding: 20px;
+  margin: 2rem;
+}
+
+.login-contents {
+  width: 40rem;
+  height: 36rem;
+}
+
+.login-header {
+  margin-left: 5rem;
+  margin-top: -38rem;
+  display: relative;
+  color: #269577;
+  justify-content: center;
+}
+
+.login-image {
+  display: flex;
+  position: relative;
+  width: 40rem;
+  height: 42.5rem;
+  margin-left: 41.3rem;
+  margin-top: -1.2rem;
+}
+
+.login-email-div {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  margin-left: 5rem;
+}
+
+.email-text {
+  color: #269577;
+  font-weight: 600;
+}
+
+.login-email-field {
+  border: 2px solid #269577;
+  outline: none;
+  width: 30rem;
+  height: 2rem;
+  border-radius: 4px;
+}
+
+.login-password-div {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  margin-left: 5rem;
+}
+
+.password-text {
+  color: #269577;
+  font-weight: 600;
+}
+
+.login-password-field {
+  border: 2px solid #269577;
+  outline: none;
+  width: 30rem;
+  height: 2rem;
+  border-radius: 4px;
+}
+
+.error {
+  color: rgb(202, 80, 80);
+}
+
+.forgot-password-link {
+  color: #269577;
+  text-decoration: none;
+  margin-left: 28rem;
+}
+
+.login-button {
+  cursor: pointer;
+  margin-top: 5rem;
+  margin-left: 5rem;
+  font-size: large;
+  font-weight: 600;
+  border: none;
+  color: white;
+  background-color: #269577;
+  border-radius: 4px;
+  width: 6rem;
+  height: 2rem;
+}
+
+.register-button {
+  cursor: pointer;
+  margin-left: 2rem;
+  font-size: large;
+  font-weight: 600;
+  border: none;
+  color: white;
+  background-color: #269577;
+  border-radius: 4px;
+  width: 6rem;
+  height: 2rem;
+}

@@ -1,0 +1,107 @@
+.registration-background {
+  background-image: url("../../assets/Backgrounds/loginImage.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+.registration-container {
+  width: 80rem;
+  height: 40rem;
+  background-color: white;
+  border-radius: 4px;
+  padding: 20px;
+  margin: 2rem;
+}
+
+.registration-header {
+  display: flex;
+  color: #269577;
+  justify-content: center;
+  margin-bottom: 5rem;
+}
+
+.register-fullname-div {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  margin-left: 5rem;
+}
+
+.register-fullname-text {
+  color: #269577;
+  font-weight: 600;
+}
+
+.register-fullname-field {
+  border: 2px solid #269577;
+  outline: none;
+  width: 30rem;
+  height: 2rem;
+  border-radius: 4px;
+}
+
+.register-email-div {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  margin-left: 5rem;
+}
+
+.register-email-text {
+  color: #269577;
+  font-weight: 600;
+}
+
+.register-email-field {
+  border: 2px solid #269577;
+  outline: none;
+  width: 30rem;
+  height: 2rem;
+  border-radius: 4px;
+}
+
+.register-password-div {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  margin-left: 5rem;
+}
+
+.register-password-text {
+  color: #269577;
+  font-weight: 600;
+}
+
+.register-password-field {
+  border: 2px solid #269577;
+  outline: none;
+  width: 30rem;
+  height: 2rem;
+  border-radius: 4px;
+}
+
+.register-confirmpassword-div {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  margin-left: 5rem;
+}
+
+.register-confirmpassword-text {
+  color: #269577;
+  font-weight: 600;
+}
+
+.register-confirmpassword-field {
+  border: 2px solid #269577;
+  outline: none;
+  width: 30rem;
+  height: 2rem;
+  border-radius: 4px;
+}
+
+
+

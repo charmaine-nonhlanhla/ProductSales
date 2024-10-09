@@ -8,9 +8,6 @@ export const NavigationBar = () => {
       <div className="navigation-content">
         <div className="navigation-menu">
           <div className="navigation-menu-item">
-            <h1 className="navigation-title">
-              Fresh Harvest Market
-            </h1>
           </div>
           <div className="navigation-link">
             <Link to="/home" className="home-navigation-link">

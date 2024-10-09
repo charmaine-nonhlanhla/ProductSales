@@ -2,6 +2,7 @@ using System.Diagnostics;
 using Application.Products;
 using Application.Products.Services;
 using Domain;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers

@@ -1,0 +1,51 @@
+.sales-table {
+  margin-top: 4rem;
+  margin-left: 30rem;
+  width: 80rem;
+  background-color: #f8f8ff;
+  border-collapse: collapse; /* Ensures borders are collapsed for clean lines */
+  border: 2px solid #269577; /* Left border for the entire table */
+}
+
+.sales-table-header {
+  color: white;
+  background-color: #269577;
+}
+
+/* Add vertical lines between columns in table header */
+.sales-table-header th {
+  border-right: 1px solid #269577; /* Vertical lines between header columns */
+  border-left: 1px solid #269577; /* Left border for the first header column */
+  padding: 10px;
+}
+
+/* Add vertical lines between columns in table body */
+.sales-table td {
+  border-right: 1px solid #269577; /* Vertical lines between data columns */
+  border-left: 1px solid #269577; /* Left border for the first data column */
+  padding: 10px;
+}
+
+/* Align Quantity Sold and Price columns to the right */
+.sales-table td:nth-child(2), /* Quantity Sold */
+.sales-table td:nth-child(4), /* Price */
+.sales-table td:nth-child(3) { /* Sale Date */
+  text-align: right; /* Align text to the right */
+}
+
+/* Align Quantity Sold and Price headers to the right */
+.sales-table-header th:nth-child(2), /* Quantity Sold */
+.sales-table-header th:nth-child(4), /* Price */
+.sales-table-header th:nth-child(3) { /* Sale Date */
+  text-align: right; /* Align header text to the right */
+}
+
+/* Optional: Styling for parent and child rows */
+.parent-row {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.child-row {
+  background-color: #f0f0f0; /* To differentiate child rows */
+}
