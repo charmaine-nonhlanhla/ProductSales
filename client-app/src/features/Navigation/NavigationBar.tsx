@@ -10,7 +10,9 @@ export default observer(function NavigationBar() {
   return (
     <div className="navigation-container">
       <div className="navigation-content">
-        <div className="navigation-menu"></div>
+        <div className="navigation-menu">
+          <h1 className="navigation-header">Fresh Harvest Market</h1>
+        </div>
         <div className="username-display">
           <span className="username-text">{user?.username}</span>
         </div>

@@ -16,12 +16,15 @@
   width: 20rem;
   height: 20rem;
   object-fit: cover;
+  
 }
 
 .product-description {
   color: #269577;
+  text-align: center;
 }
 
 .product-price {
   color: #269577;
+  text-align: center;
 }

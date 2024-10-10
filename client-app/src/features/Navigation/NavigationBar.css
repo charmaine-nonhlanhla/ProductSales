@@ -3,79 +3,22 @@
   margin-left: 24rem;
   height: 70px;
   box-shadow: 0 4px 8px rgba(149, 145, 145, 0.3);
-}
-.navigation-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 30px;
+  position:relative; 
+  
 }
 
-.navigation-menu {
-  display: flex;
-  align-items: center;
-}
-
-.home-navigation-link {
+.navigation-header {
   color: #269577;
-  text-decoration: none;
-  margin-right: 2rem;
-}
-
-.products-navigation-link {
-  color: #269577;
-  text-decoration: none;
-  margin-right: 2rem;
-}
-
-.about-navigation-link {
-  color: #269577;
-  text-decoration: none;
-  margin-right: 2rem;
-}
-
-.contact-navigation-link {
-  color: #269577;
-  margin-right: 35rem;
-  text-decoration: none;
-}
-
-.sales-navigation-link {
-  color: #269577;
-  margin-right: 2rem;
-  text-decoration: none;
-}
-
-.product-management-navigation-link {
-  color: #269577;
-  text-decoration: none;
-}
-
-.navigation-link {
-  text-decoration: none;
-  font-size: 1.5rem;
-  transition: color 0.3s ease;
-  cursor: pointer;
-}
-
-.shopping-cart {
-  display: flex;
-  align-items: center;
-}
-
-.cart-icon {
-  color: #269577;
-  font-size: 2rem;
-  cursor: pointer;
-  transition: color 0.3s ease;
+  margin-left: 6rem;
+  text-align: center;
 }
 
 .username-display {
-  margin-left: auto; /* Align to the right */
-  padding: 10px; /* Add padding for better spacing */
+  margin-left: auto;
+  padding: 10px;
 }
 
 .username-text {
-  font-weight: bold; /* Make the username bold */
-  color: #333; /* Choose a color that fits your theme */
+  font-weight: bold;
+  color: #333;
 }

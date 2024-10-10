@@ -29,12 +29,14 @@ const ProductManagement = observer(() => {
   if (productStore.loadingInitial)
     return <LoadingComponent content="Loading products..." />;
 
-  const handleAddProduct = () => {
+  const handleAddProduct = async () => {
     const productToAdd: Product = {
       ...newProduct,
       id: 0,
     };
-    productStore.addProduct(productToAdd);
+    await productStore.addProduct(productToAdd);
+    await productStore.loadProducts();
+
     setNewProduct({
       id: 0,
       description: "",
@@ -44,8 +46,9 @@ const ProductManagement = observer(() => {
     });
   };
 
-  const handleDeleteProduct = (productId: number) => {
+  const handleDeleteProduct = async(productId: number) => {
     productStore.deleteProduct(productId);
+    productStore.loadProducts();
   };
 
   return (
@@ -61,7 +64,7 @@ const ProductManagement = observer(() => {
               <th>Actions</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className="add-product-tbody">
             <tr className="add-product-tr">
               <td>
                 <input
@@ -102,7 +105,7 @@ const ProductManagement = observer(() => {
               </td>
               <td>
                 <input
-                  type="number"
+                  type="text"
                   placeholder="Sale Price"
                   value={newProduct.salePrice}
                   onChange={(e) =>

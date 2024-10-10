@@ -6,17 +6,16 @@ import { IoBarChartSharp } from "react-icons/io5";
 import { GiFruitBowl } from "react-icons/gi";
 import { useStore } from "../../app/stores/store";
 import "./Taskbar.css";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export const Taskbar = () => {
   const {
     userStore: { logout },
   } = useStore();
-  const navigate = useNavigate();
 
-  const handleLogoutClick = () => {
-    logout();
-    navigate("/logout");
+  const handleLogoutClick = async () => {
+    await logout();
+    window.location.reload();
   };
 
   return (

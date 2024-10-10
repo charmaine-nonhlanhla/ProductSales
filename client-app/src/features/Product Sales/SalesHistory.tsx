@@ -65,7 +65,20 @@ const SalesHistory = observer(() => {
                 onClick={() => toggleProduct(productName)}
                 style={{ cursor: "pointer", fontWeight: "bold" }}
               >
-                <td>{productName}</td>
+                <td>
+                  <div className="product-name-wrapper">
+                    <span>{productName}</span>
+                    <span
+                      className={`icon ${
+                        expandedProducts.includes(productName)
+                          ? "open"
+                          : "closed"
+                      }`}
+                    >
+                      &gt;
+                    </span>
+                  </div>
+                </td>
                 <td>{calculateTotalQuantity(groupedSales[productName])}</td>
                 <td>{calculateDateRange(groupedSales[productName])}</td>
                 <td>R{calculateTotalPrice(groupedSales[productName])}</td>
@@ -74,11 +87,15 @@ const SalesHistory = observer(() => {
               {expandedProducts.includes(productName) &&
                 groupedSales[productName].map((sale) => (
                   <tr key={sale.saleId} className="child-row">
-                    {/* Removed the product description to avoid redundancy */}
-                    <td></td> {/* Empty cell for product description */}
+                    <td></td>
                     <td>{sale.saleQty}</td>
                     <td>{new Date(sale.saleDate).toLocaleDateString()}</td>
-                    <td>R{sale.salePrice.toFixed(2)}</td>
+                    <td>
+                      {sale.salePrice.toLocaleString("en-ZA", {
+                        style: "currency",
+                        currency: "ZAR",
+                      })}
+                    </td>
                   </tr>
                 ))}
             </React.Fragment>

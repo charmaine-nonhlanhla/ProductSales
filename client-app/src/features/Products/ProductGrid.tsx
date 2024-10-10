@@ -25,7 +25,12 @@ const ProductGrid = observer(() => {
               src={product.image}
               alt={product.description}
             />
-            <p className="product-price">Price: R{product.salePrice}</p>
+            <p className="product-price">
+              Price:{" "}
+              {product.salePrice
+                .toLocaleString("en-ZA", { style: "currency", currency: "ZAR" })
+                .replace("ZAR", "")}
+            </p>
           </div>
         ))
       ) : (

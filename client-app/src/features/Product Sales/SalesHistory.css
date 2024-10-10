@@ -50,3 +50,22 @@
 .child-row {
   background-color: #f0f0f0;
 }
+
+.product-name-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.icon.open {
+  transform: rotate(90deg);
+}
+
+.icon.closed {
+  transform: rotate(0deg);
+}

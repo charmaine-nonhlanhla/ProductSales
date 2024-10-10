@@ -3,9 +3,14 @@
   margin-top: 2rem;
 }
 
+.productmanagement-container {
+  background-color: white;
+  width: 80rem;
+}
+
 .management-table-header {
   color: white;
-  height: 2rem;
+  height: 3rem;
 }
 
 .product-table {
@@ -20,10 +25,12 @@
 }
 
 .product-table th {
-  text-align: right;
-  border: 1px solid #269577;
-  border-right: 1px solid #269577;
+  text-align: center;
   background-color: #269577;
+}
+
+.management-table-properties th {
+  width: 10rem;
 }
 
 .product-table tr td:nth-child(1),
@@ -46,25 +53,6 @@
 }
 
 .add-product-button {
-  background-color: #269577;
-  border: none;
-  color: white;
-  font-weight: 600;
-  height: 2rem;
-  border-radius: 4px;
-}
-
-.update-product-button {
-  background-color: #269577;
-  border: none;
-  color: white;
-  font-weight: 600;
-  height: 2rem;
-  border-radius: 4px;
-}
-
-.edit-product-button {
-  margin-right: 1rem;
   background-color: #269577;
   border: none;
   color: white;
@@ -112,4 +100,8 @@
 
 .product-table input::placeholder {
   color: #b0b0b0;
+}
+
+.add-product-tbody {
+  background-color: white;
 }
