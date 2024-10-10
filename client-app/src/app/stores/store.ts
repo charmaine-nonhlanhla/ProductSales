@@ -4,19 +4,19 @@ import UserStore from "./userStore";
 import CommonStore from "./commonStore";
 
 interface Store {
-    productStore: ProductStore 
-    commonStore: CommonStore
-    userStore: UserStore
+  productStore: ProductStore;
+  commonStore: CommonStore;
+  userStore: UserStore;
 }
 
 export const store: Store = {
-    productStore: new ProductStore(),
-    commonStore: new CommonStore(),
-    userStore: new UserStore(),
-}
+  productStore: new ProductStore(),
+  commonStore: new CommonStore(),
+  userStore: new UserStore(),
+};
 
 export const StoreContext = createContext(store);
 
 export function useStore() {
-    return useContext(StoreContext)
+  return useContext(StoreContext);
 }

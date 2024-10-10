@@ -1,0 +1,115 @@
+.product-management-background {
+  margin-left: 32rem;
+  margin-top: 2rem;
+}
+
+.management-table-header {
+  color: white;
+  height: 2rem;
+}
+
+.product-table {
+  width: 80rem;
+  border: 2px solid #269577;
+}
+
+.product-management-image {
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover;
+}
+
+.product-table th {
+  text-align: right;
+  border: 1px solid #269577;
+  border-right: 1px solid #269577;
+  background-color: #269577;
+}
+
+.product-table tr td:nth-child(1),
+.product-table tr td:nth-child(2) {
+  text-align: left;
+}
+
+.product-table td {
+  text-align: right;
+  border-bottom: 1px solid #269577;
+  color: #269577;
+}
+
+.product-table td {
+  text-align: right;
+}
+
+.product-table td:first-child {
+  text-align: left;
+}
+
+.add-product-button {
+  background-color: #269577;
+  border: none;
+  color: white;
+  font-weight: 600;
+  height: 2rem;
+  border-radius: 4px;
+}
+
+.update-product-button {
+  background-color: #269577;
+  border: none;
+  color: white;
+  font-weight: 600;
+  height: 2rem;
+  border-radius: 4px;
+}
+
+.edit-product-button {
+  margin-right: 1rem;
+  background-color: #269577;
+  border: none;
+  color: white;
+  font-weight: 600;
+  height: 2rem;
+  border-radius: 4px;
+}
+
+.delete-product-button {
+  background-color: #cf4848;
+  border: none;
+  color: white;
+  font-weight: 600;
+  height: 2rem;
+  border-radius: 4px;
+}
+
+.product-table select {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  color: #269577;
+  font-size: 14px;
+  cursor: pointer;
+  outline: none;
+}
+
+.product-table input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  color: #269577;
+  font-size: 14px;
+}
+
+.product-table input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  color: #269577;
+  font-size: 14px;
+  text-align: right;
+}
+
+.product-table input::placeholder {
+  color: #b0b0b0;
+}

@@ -83,16 +83,12 @@
   color: rgb(202, 80, 80);
 }
 
-.forgot-password-link {
-  color: #269577;
-  text-decoration: none;
-  margin-left: 28rem;
+.buttons {
+  margin-left: 5rem;
 }
 
 .login-button {
   cursor: pointer;
-  margin-top: 5rem;
-  margin-left: 5rem;
   font-size: large;
   font-weight: 600;
   border: none;
@@ -105,7 +101,6 @@
 
 .register-button {
   cursor: pointer;
-  margin-left: 2rem;
   font-size: large;
   font-weight: 600;
   border: none;

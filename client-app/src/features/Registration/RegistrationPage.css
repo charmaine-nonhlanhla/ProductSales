@@ -16,11 +16,21 @@
   margin: 2rem;
 }
 
-.registration-header {
+.register-image {
   display: flex;
+  position: relative;
+  width: 40rem;
+  height: 42.5rem;
+  margin-left: 41.3rem;
+  margin-top: -1.2rem;
+}
+
+.registration-header {
+  margin-left: 5rem;
+  margin-top: -38rem;
+  display: relative;
   color: #269577;
   justify-content: center;
-  margin-bottom: 5rem;
 }
 
 .register-fullname-div {
@@ -103,5 +113,8 @@
   border-radius: 4px;
 }
 
-
-
+.register-button {
+  margin-left: 5rem;
+  margin-top: 2rem;
+  background-color: #269577;
+}

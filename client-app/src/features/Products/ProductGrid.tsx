@@ -4,7 +4,7 @@ import { useStore } from "../../app/stores/store";
 import "./ProductGrid.css";
 import LoadingComponent from "../../app/layout/LoadingComponent";
 
-const ProductGrid = observer(({ searchTerm }: { searchTerm: string }) => {
+const ProductGrid = observer(() => {
   const { productStore } = useStore();
 
   useEffect(() => {
@@ -14,19 +14,14 @@ const ProductGrid = observer(({ searchTerm }: { searchTerm: string }) => {
   if (productStore.loadingInitial)
     return <LoadingComponent content="Loading products..." />;
 
-  const filteredProducts = productStore.products.filter((product) =>
-    product.description.toLowerCase().includes(searchTerm.toLowerCase())
-  );
-
   return (
     <div className="product-grid">
-      {filteredProducts.length > 0 ? (
-        filteredProducts.map((product) => (
+      {productStore.products.length > 0 ? (
+        productStore.products.map((product) => (
           <div className="product-card" key={product.id}>
             <h3 className="product-description">{product.description}</h3>
             <img
               className="product-image"
-              width={300}
               src={product.image}
               alt={product.description}
             />
@@ -34,7 +29,7 @@ const ProductGrid = observer(({ searchTerm }: { searchTerm: string }) => {
           </div>
         ))
       ) : (
-        <p>No products found matching your search.</p>
+        <p>No products available.</p>
       )}
     </div>
   );

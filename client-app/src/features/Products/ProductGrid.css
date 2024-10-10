@@ -3,18 +3,16 @@
   position: absolute;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-left: 24rem;
+  margin-left: 28rem;
 }
 
 .product-card {
-
   background-color: white;
-  margin-left: 2rem;
-  margin-bottom: 2rem;
+  margin-left: 1rem;
+  margin-top: 2rem;
 }
 
 .product-image {
-  
   width: 20rem;
   height: 20rem;
   object-fit: cover;

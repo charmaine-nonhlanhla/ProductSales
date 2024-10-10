@@ -6,27 +6,29 @@ import { MainLayout } from "./MainLayout";
 import SalesPage from "../../features/Product Sales/SalesPage";
 import LoginPage from "../../features/Login/LoginPage";
 import RegistrationPage from "../../features/Registration/RegistrationPage";
+import ProductManagement from "../../features/Product Management/ProductManagement";
 
 export const routes: RouteObject[] = [
   {
-    path: '/',
+    path: "/",
     element: <App />,
     children: [
       {
-        path: '', 
+        path: "",
         element: <MainLayout />,
         children: [
-          { path: '', element: <HomePage /> },
-          { path: 'products', element: <ProductsPage /> },
-          { path: 'sales', element: <SalesPage /> },
-          { path: '*', element: <Navigate to="/" /> }
-        ]
+          { path: "", element: <HomePage /> },
+          { path: "products", element: <ProductsPage /> },
+          { path: "management", element: <ProductManagement /> },
+          { path: "sales", element: <SalesPage /> },
+          { path: "*", element: <Navigate to="/" /> },
+        ],
       },
 
-      {path: 'login', element: <LoginPage /> },
-      {path: 'register', element: <RegistrationPage /> }
-    ]
-  }
+      { path: "login", element: <LoginPage /> },
+      { path: "register", element: <RegistrationPage /> },
+    ],
+  },
 ];
 
 export const router = createBrowserRouter(routes);

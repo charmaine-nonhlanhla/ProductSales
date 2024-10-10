@@ -2,9 +2,10 @@ import { observer } from "mobx-react-lite";
 import { useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import registrationImage from "../../assets/Backgrounds/slideshow4.jpg";
 import { useStore } from "../../app/stores/store";
 import { UserFormValues } from "../../app/models/user";
-import '../Registration/RegistrationPage.css'
+import "../Registration/RegistrationPage.css";
 
 export default observer(function RegistrationPage() {
   const { userStore } = useStore();
@@ -34,6 +35,11 @@ export default observer(function RegistrationPage() {
   return (
     <div className="registration-background">
       <div className="registration-container">
+        <img
+          className="register-image"
+          src={registrationImage}
+          alt="Registration Background"
+        />
         <h1 className="registration-header">
           Welcome to Fresh Harvest Market!
         </h1>
@@ -51,8 +57,14 @@ export default observer(function RegistrationPage() {
           {({ handleSubmit, isSubmitting }) => (
             <Form onSubmit={handleSubmit} autoComplete="off">
               <div className="register-fullname-div">
-                <label className="register-fullname-text" htmlFor="username">Full Name</label>
-                <Field className="register-fullname-field" name="username" placeholder="Full Name" />
+                <label className="register-fullname-text" htmlFor="username">
+                  Full Name
+                </label>
+                <Field
+                  className="register-fullname-field"
+                  name="username"
+                  placeholder="Full Name"
+                />
                 <ErrorMessage
                   name="username"
                   component="div"
@@ -61,14 +73,28 @@ export default observer(function RegistrationPage() {
               </div>
 
               <div className="register-email-div">
-                <label className="register-email-text" htmlFor="email">Email</label>
-                <Field className="register-email-field" name="email" type="email" placeholder="Email" />
+                <label className="register-email-text" htmlFor="email">
+                  Email
+                </label>
+                <Field
+                  className="register-email-field"
+                  name="email"
+                  type="email"
+                  placeholder="Email"
+                />
                 <ErrorMessage name="email" component="div" className="error" />
               </div>
 
               <div className="register-password-div">
-                <label className="register-password-text" htmlFor="password">Password</label>
-                <Field className="register-password-field" name="password" type="password" placeholder="Password" />
+                <label className="register-password-text" htmlFor="password">
+                  Password
+                </label>
+                <Field
+                  className="register-password-field"
+                  name="password"
+                  type="password"
+                  placeholder="Password"
+                />
                 <ErrorMessage
                   name="password"
                   component="div"
@@ -77,9 +103,14 @@ export default observer(function RegistrationPage() {
               </div>
 
               <div className="register-confirmpassword-div">
-                <label className="register-confirmpassword-text " htmlFor="confirmPassword">Confirm Password</label>
+                <label
+                  className="register-confirmpassword-text "
+                  htmlFor="confirmPassword"
+                >
+                  Confirm Password
+                </label>
                 <Field
-                className="register-confirmpassword-field"
+                  className="register-confirmpassword-field"
                   name="confirmPassword"
                   type="password"
                   placeholder="Confirm Password"

@@ -31,8 +31,10 @@ export default class UserStore {
   register = async (creds: UserFormValues) => {
     try {
       const user = await agent.Account.register(creds);
+      console.log("Login User:", user);
       store.commonStore.setToken(user.token);
       runInAction(() => (this.user = user));
+      console.log("Current User after login:", this.user);
       router.navigate("/");
       console.log(user);
     } catch (error) {
@@ -49,6 +51,8 @@ export default class UserStore {
   getUser = async () => {
     try {
       const user = await agent.Account.currentUser();
+      store.commonStore.setToken(user.token);
+      this.startRefreshTokenTime(user);
       runInAction(() => (this.user = user));
     } catch (error) {
       console.log(error);

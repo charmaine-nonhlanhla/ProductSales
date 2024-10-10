@@ -1,45 +1,20 @@
 import "./NavigationBar.css";
-import { FiShoppingCart } from "react-icons/fi";
-import { Link } from "react-router-dom";
+import { useStore } from "../../app/stores/store";
+import { observer } from "mobx-react-lite";
 
-export const NavigationBar = () => {
+export default observer(function NavigationBar() {
+  const {
+    userStore: { user },
+  } = useStore();
+
   return (
     <div className="navigation-container">
       <div className="navigation-content">
-        <div className="navigation-menu">
-          <div className="navigation-menu-item">
-          </div>
-          <div className="navigation-link">
-            <Link to="/home" className="home-navigation-link">
-              Home
-            </Link>
-
-            <Link to="/products" className="products-navigation-link">
-              Products
-            </Link>
-
-            <Link to="/sales" className="sales-navigation-link">
-              Sales
-            </Link>
-
-            <Link to="/about" className="about-navigation-link">
-              About
-            </Link>
-
-            <Link to="/contact" className="contact-navigation-link">
-              Contact
-            </Link>
-
-            <Link to="/management" className="product-management-navigation-link">
-              Product Management
-            </Link>
-
-          </div>
-        </div>
-        <div className="shopping-cart">
-          <FiShoppingCart className="cart-icon" />
+        <div className="navigation-menu"></div>
+        <div className="username-display">
+          <span className="username-text">{user?.username}</span>
         </div>
       </div>
     </div>
   );
-};
+});

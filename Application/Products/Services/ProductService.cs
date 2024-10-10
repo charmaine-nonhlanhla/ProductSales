@@ -86,11 +86,11 @@ namespace Application.Products.Services
 
     public async Task SyncAllProductSalesAsync()
     {
-      var products = await _context.Products.ToListAsync(); 
+      var products = await _context.Products.ToListAsync();
 
       foreach (var product in products)
       {
-        await SyncProductSalesAsync(product.Id); 
+        await SyncProductSalesAsync(product.Id);
       }
 
     }

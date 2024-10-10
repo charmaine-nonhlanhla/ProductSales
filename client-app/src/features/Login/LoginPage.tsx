@@ -1,7 +1,7 @@
 import { observer } from "mobx-react-lite";
 import "../Login/LoginPage.css";
 import loginImage from "../../assets/Backgrounds/slideshow4.jpg";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import * as Yup from "yup";
 import { useStore } from "../../app/stores/store";
 import { Formik, Form, Field, ErrorMessage, FormikHelpers } from "formik";
@@ -82,9 +82,6 @@ export default observer(function LoginPage() {
                     className="error"
                   />
                 </div>
-                <Link to="/forgot-password" className="forgot-password-link">
-                  Forgot Password?
-                </Link>
                 <div className="buttons">
                   <button type="submit" className="login-button">
                     Login

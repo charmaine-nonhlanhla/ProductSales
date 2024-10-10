@@ -74,7 +74,8 @@ const SalesHistory = observer(() => {
               {expandedProducts.includes(productName) &&
                 groupedSales[productName].map((sale) => (
                   <tr key={sale.saleId} className="child-row">
-                    <td>{sale.product?.description || "Unknown Product"}</td>
+                    {/* Removed the product description to avoid redundancy */}
+                    <td></td> {/* Empty cell for product description */}
                     <td>{sale.saleQty}</td>
                     <td>{new Date(sale.saleDate).toLocaleDateString()}</td>
                     <td>R{sale.salePrice.toFixed(2)}</td>

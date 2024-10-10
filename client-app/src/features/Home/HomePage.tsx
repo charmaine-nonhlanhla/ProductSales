@@ -6,12 +6,12 @@ export default observer(function HomePage() {
   const navigate = useNavigate();
 
   const viewProducts = () => {
-    navigate("/products")
-  }
+    navigate("/products");
+  };
 
   const viewProductSales = () => {
-    navigate("/sales")
-  }
+    navigate("/sales");
+  };
 
   return (
     <div className="homepage-background">
@@ -26,8 +26,12 @@ export default observer(function HomePage() {
             produce, we have everything you need to create healthy and delicious
             meals!
           </p>
-          <button className="product-view-button" onClick={viewProducts}>View Products</button>
-          <button className="sales-view-button" onClick={viewProductSales}>View Sales Figures</button>
+          <button className="product-view-button" onClick={viewProducts}>
+            View Products
+          </button>
+          <button className="sales-view-button" onClick={viewProductSales}>
+            View Sales Figures
+          </button>
         </div>
       </div>
     </div>

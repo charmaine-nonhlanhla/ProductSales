@@ -1,8 +1,7 @@
 import { makeAutoObservable, reaction } from "mobx";
 
-
 export default class CommonStore {
-  token: string | null = localStorage.getItem('jwt');
+  token: string | null = localStorage.getItem("jwt");
   appLoaded = false;
 
   constructor() {
@@ -10,21 +9,21 @@ export default class CommonStore {
 
     reaction(
       () => this.token,
-      token => {
+      (token) => {
         if (token) {
-          localStorage.setItem('jwt', token)
+          localStorage.setItem("jwt", token);
         } else {
-          localStorage.removeItem('jwt')
+          localStorage.removeItem("jwt");
         }
       }
-    )
+    );
   }
 
   setToken = (token: string | null) => {
     this.token = token;
-  }
+  };
 
   setAppLoaded = () => {
     this.appLoaded = true;
-  }
+  };
 }

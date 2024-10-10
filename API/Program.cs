@@ -10,7 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllers(opt => 
+builder.Services.AddControllers(opt =>
 {
   var policy = new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build();
   opt.Filters.Add(new AuthorizeFilter(policy));
@@ -24,8 +24,8 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
+  app.UseSwagger();
+  app.UseSwaggerUI();
 }
 
 app.UseCors("CorsPolicy");
@@ -41,16 +41,16 @@ var services = scope.ServiceProvider;
 
 try
 {
-    var context = services.GetRequiredService<DataContext>();
-    var userManager = services.GetRequiredService<UserManager<User>>();
-    await context.Database.MigrateAsync();
-    await Seed.SeedData(context, userManager);
+  var context = services.GetRequiredService<DataContext>();
+  var userManager = services.GetRequiredService<UserManager<User>>();
+  await context.Database.MigrateAsync();
+  await Seed.SeedData(context, userManager);
 }
 catch (Exception ex)
 {
-    var logger = services.GetRequiredService<ILogger<Program>>();
-    logger.LogError(ex, "An error occured during migration");
-   
+  var logger = services.GetRequiredService<ILogger<Program>>();
+  logger.LogError(ex, "An error occured during migration");
+
 }
 
 app.Run();
