@@ -61,7 +61,7 @@ Make sure you have the following tools installed:
 
 1. *Clone the Repository*:  
    Clone the repository to your local machine using the command:
-   git clone https://github.com/your-repository-url
+   git clone https://github.com/your-repository-url](https://github.com/charmaine-nonhlanhla/ProductSales.git
    
 
 2. *Configure SQL Connection String*:  
