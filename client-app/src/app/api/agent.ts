@@ -48,13 +48,13 @@ const Account = {
 };
 
 const Products = {
-  productList: () => requests.get<Product[]>("/products"),
+  productList: () => requests.get<Product[]>('/products'),
   deleteProduct: (id: string) => requests.delete<void>(`/products/${id}`),
   addProduct: (product: Product) =>
     requests.post<Product>(`/products`, product),
   updateProduct: (id: string, product: Product) =>
     requests.put<void>(`/products/${id}`, product),
-  syncProducts: () => requests.get<void>("/products/sync-products"),
+  syncProductSales: () => requests.post<void>('/products/sync-product-sales', {}),
 };
 
 const ProductSales = {

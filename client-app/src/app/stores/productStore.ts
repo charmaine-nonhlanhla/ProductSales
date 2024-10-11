@@ -103,13 +103,13 @@ export default class ProductStore {
     }
   };
 
-  syncProducts = async () => {
+  syncProductSales = async () => {
     this.setLoading(true);
     try {
-      await agent.Products.syncProducts();
-      await this.loadProducts();
+      await agent.Products.syncProductSales();
+      await this.loadSales();
     } catch (error) {
-      console.log(error);
+      console.log("Error syncing product sales:", error);
     } finally {
       runInAction(() => {
         this.setLoading(false);

@@ -69,3 +69,17 @@
 .icon.closed {
   transform: rotate(0deg);
 }
+
+.sync-button {
+  cursor: pointer;
+  color: white;
+  background-color: #269577;
+  margin-left: 30rem;
+  margin-top: 1rem;
+  border-radius: 4px;
+  font-weight: 600;
+  width: 10rem;
+  height: 2rem;
+  outline: none;
+  border: none;
+}

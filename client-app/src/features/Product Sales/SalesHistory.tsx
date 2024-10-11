@@ -102,6 +102,13 @@ const SalesHistory = observer(() => {
           ))}
         </tbody>
       </table>
+      <button
+        onClick={productStore.syncProductSales}
+        disabled={productStore.loading}
+        className="sync-button"
+      >
+        {productStore.loading ? "Syncing Sales..." : "Sync Sales"}
+      </button>
     </div>
   );
 });
