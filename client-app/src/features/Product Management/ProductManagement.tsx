@@ -46,7 +46,7 @@ const ProductManagement = observer(() => {
     });
   };
 
-  const handleDeleteProduct = async(productId: number) => {
+  const handleDeleteProduct = async (productId: number) => {
     productStore.deleteProduct(productId);
     productStore.loadProducts();
   };
@@ -65,9 +65,10 @@ const ProductManagement = observer(() => {
             </tr>
           </thead>
           <tbody className="add-product-tbody">
-            <tr className="add-product-tr">
+            <tr>
               <td>
                 <input
+                  className="add-product-inputs"
                   type="text"
                   placeholder="Description"
                   value={newProduct.description}
@@ -95,6 +96,7 @@ const ProductManagement = observer(() => {
               </td>
               <td>
                 <input
+                  className="add-product-inputs"
                   type="text"
                   placeholder="Image URL"
                   value={newProduct.image}
@@ -105,7 +107,8 @@ const ProductManagement = observer(() => {
               </td>
               <td>
                 <input
-                  type="text"
+                  className="add-product-inputs"
+                  type="number"
                   placeholder="Sale Price"
                   value={newProduct.salePrice}
                   onChange={(e) =>
@@ -137,7 +140,7 @@ const ProductManagement = observer(() => {
                     width={50}
                   />
                 </td>
-                <td>R{product.salePrice}</td>
+                <td>R{typeof product.salePrice === 'number' ? product.salePrice.toFixed(2) : 'N/A'}</td>
                 <td>
                   <button
                     className="delete-product-button"

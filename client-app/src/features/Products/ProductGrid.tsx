@@ -19,12 +19,12 @@ const ProductGrid = observer(() => {
       {productStore.products.length > 0 ? (
         productStore.products.map((product) => (
           <div className="product-card" key={product.id}>
-            <h3 className="product-description">{product.description}</h3>
             <img
               className="product-image"
               src={product.image}
               alt={product.description}
             />
+            <h3 className="product-description">{product.description}</h3>
             <p className="product-price">
               Price:{" "}
               {product.salePrice

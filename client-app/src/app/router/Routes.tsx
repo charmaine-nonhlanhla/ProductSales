@@ -13,6 +13,8 @@ export const routes: RouteObject[] = [
     path: "/",
     element: <App />,
     children: [
+      { path: "login", element: <LoginPage /> },
+      { path: "register", element: <RegistrationPage /> },
       {
         path: "",
         element: <MainLayout />,
@@ -24,9 +26,6 @@ export const routes: RouteObject[] = [
           { path: "*", element: <Navigate to="/" /> },
         ],
       },
-
-      { path: "login", element: <LoginPage /> },
-      { path: "register", element: <RegistrationPage /> },
     ],
   },
 ];

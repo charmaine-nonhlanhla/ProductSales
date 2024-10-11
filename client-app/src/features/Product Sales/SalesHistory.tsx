@@ -3,6 +3,7 @@ import { observer } from "mobx-react-lite";
 import { useStore } from "../../app/stores/store";
 import "./SalesHistory.css";
 import React from "react";
+import LoadingComponent from "../../app/layout/LoadingComponent";
 
 const SalesHistory = observer(() => {
   const { productStore } = useStore();
@@ -12,7 +13,7 @@ const SalesHistory = observer(() => {
     productStore.loadSales();
   }, [productStore]);
 
-  if (productStore.loadingInitial) return <div>Loading sales history...</div>;
+  if (productStore.loadingInitial) return <LoadingComponent content="Loading sales history..." />;
 
   const groupedSales = productStore.sales.reduce((acc, sale) => {
     const productName = sale.product?.description || "Unknown Product";
@@ -33,9 +34,15 @@ const SalesHistory = observer(() => {
   };
 
   const calculateTotalPrice = (sales: typeof productStore.sales) => {
-    return sales
-      .reduce((total, sale) => total + sale.salePrice * sale.saleQty, 0)
-      .toFixed(2);
+    return new Intl.NumberFormat("en-ZA", {
+      style: "currency",
+      currency: "ZAR",
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+      useGrouping: true,
+    }).format(
+      sales.reduce((total, sale) => total + sale.salePrice * sale.saleQty, 0)
+    );
   };
 
   const toggleProduct = (productName: string) => {
@@ -81,7 +88,7 @@ const SalesHistory = observer(() => {
                 </td>
                 <td>{calculateTotalQuantity(groupedSales[productName])}</td>
                 <td>{calculateDateRange(groupedSales[productName])}</td>
-                <td>R{calculateTotalPrice(groupedSales[productName])}</td>
+                <td>{calculateTotalPrice(groupedSales[productName])}</td>
               </tr>
 
               {expandedProducts.includes(productName) &&

@@ -4,7 +4,7 @@
 }
 
 .productmanagement-container {
-  background-color: white;
+  background-color: #269577;
   width: 80rem;
 }
 
@@ -15,11 +15,11 @@
 
 .product-table {
   width: 80rem;
-  border: 2px solid #269577;
+  border: 1px solid #269577;
 }
 
 .product-management-image {
-  width: 5rem;
+  width: 10rem;
   height: 5rem;
   object-fit: cover;
 }
@@ -34,13 +34,14 @@
 }
 
 .product-table tr td:nth-child(1),
-.product-table tr td:nth-child(2) {
-  text-align: left;
+.product-table tr td:nth-child(2),
+.product-table tr td:nth-child(3) {
+  text-align: center;
 }
 
 .product-table td {
   text-align: right;
-  border-bottom: 1px solid #269577;
+  border-bottom: 1px #269577;
   color: #269577;
 }
 
@@ -48,11 +49,8 @@
   text-align: right;
 }
 
-.product-table td:first-child {
-  text-align: left;
-}
-
 .add-product-button {
+  cursor: pointer;
   background-color: #269577;
   border: none;
   color: white;
@@ -62,6 +60,7 @@
 }
 
 .delete-product-button {
+  cursor: pointer;
   background-color: #cf4848;
   border: none;
   color: white;
@@ -71,7 +70,7 @@
 }
 
 .product-table select {
-  width: 100%;
+  cursor: pointer;
   padding: 8px;
   border: none;
   border-radius: 4px;
@@ -82,7 +81,6 @@
 }
 
 .product-table input[type="text"] {
-  width: 100%;
   padding: 8px;
   border: none;
   color: #269577;
@@ -90,7 +88,6 @@
 }
 
 .product-table input[type="number"] {
-  width: 100%;
   padding: 8px;
   border: none;
   color: #269577;
@@ -104,4 +101,10 @@
 
 .add-product-tbody {
   background-color: white;
+}
+
+.add-product-inputs {
+  border: none;
+  outline: none;
+  
 }
