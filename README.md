@@ -101,6 +101,10 @@ Make sure you have the following tools installed:
    npm start or npm run dev
    
    The frontend will be available at https://localhost:3000.
+   
+Upon successfully loading the application. Please use these credentials to log in **(ruth@test.com | Pa$$w0rd)**
+Kindly note, in order to uplaod an image the image needs to have an **https** link or it will not display.
+   
 
 ## Testing
 
