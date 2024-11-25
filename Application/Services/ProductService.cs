@@ -5,7 +5,7 @@ using Domain;
 using Microsoft.EntityFrameworkCore;
 using Persistence;
 
-namespace Application.Products.Services
+namespace Application.Services
 {
   public class ProductService
   {
@@ -43,13 +43,9 @@ namespace Application.Products.Services
         {
           _context.Products.Add(existingProduct);
         }
-
-
+        await _context.SaveChangesAsync();
         await SyncProductSalesAsync(productDto.Id);
       }
-
-
-      await _context.SaveChangesAsync();
     }
 
     public async Task SyncProductSalesAsync(int productId)

@@ -1,6 +1,7 @@
+using Application.Services;
 using MediatR;
 
-namespace Application.Products.Services
+namespace Application.Products
 {
   public class SyncProductsCommand : IRequest<string>
   {

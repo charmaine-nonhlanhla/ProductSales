@@ -58,12 +58,12 @@ export default observer(function RegistrationPage() {
             <Form onSubmit={handleSubmit} autoComplete="off">
               <div className="register-fullname-div">
                 <label className="register-fullname-text" htmlFor="username">
-                  Full Name
+                  Username
                 </label>
                 <Field
                   className="register-fullname-field"
                   name="username"
-                  placeholder="Full Name"
+                  placeholder="Username"
                 />
                 <ErrorMessage
                   name="username"

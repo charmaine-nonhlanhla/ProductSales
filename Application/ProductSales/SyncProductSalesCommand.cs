@@ -1,3 +1,4 @@
+using Application.Services;
 using MediatR;
 
 namespace Application.Products.Services
