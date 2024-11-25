@@ -5,8 +5,8 @@ import { FiLogOut } from "react-icons/fi";
 import { IoBarChartSharp } from "react-icons/io5";
 import { GiFruitBowl } from "react-icons/gi";
 import { useStore } from "../../app/stores/store";
-import "./Taskbar.css";
 import { Link } from "react-router-dom";
+import "../TaskBar/TaskBar.css"
 
 export const Taskbar = () => {
   const {
